@@ -1,0 +1,291 @@
+
+
+@font-face {
+  font-family: eth;
+  src: url("../assets/fonts/eth.woff");
+}
+
+
+:root {
+  --color-text: #000;
+  --color-background: #fff;
+  --color-dark: #000;
+  --color-white: #fff;
+  --color-primary: #5399ff;
+  --border-color: rgba(21, 61, 111, 0.44);
+  --color-secondary: #1a304a;
+  --font: "eth"
+}
+
+.popUpAlert {
+  font-size: 20px !important;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font);
+  background-color: var(--color-background);
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    rgba(168, 204, 255, 0.1) 0%,
+    rgba(33, 36, 41, 0) 100%
+  );
+  background-position: 0px -30vh;
+  background-repeat: no-repeat;
+}
+h1,
+h2,
+h3,
+h4,
+th,
+tr {
+  color: var(--color-text);
+}
+/* Navbar  */
+.navbar {
+  background: transparent !important;
+  color: #ffff !important;
+}
+
+.navbar-brand {
+  color:  var(--color-text) !important;
+  font-size: 24px;
+
+
+}
+.navbar .identicon {
+  width: 30px;
+  height: 30px;
+
+}
+
+.nav-link {
+  font-family: var(--font);
+  margin-left: 30px;
+  color:  var(--color-text) !important;
+  cursor: pointer;
+}
+
+.btn-primary {
+  cursor: pointer;
+  color: var(--color-white);
+  background-color: var(--color-dark);
+  border: none;
+  min-width: 200px;
+  border-radius: 10px;
+  font-size: 16px;
+  border: 1px solid var(--border-color);
+}
+.btn-primary:hover,
+.btn-primary:active {
+  color: var(--color-primary);
+  background-color: var(--color-dark);
+  border: 1px solid var(--border-color);
+  outline: none !important;
+  box-shadow: none;
+}
+.btn:focus {
+  box-shadow: none;
+}
+.btn:focus,
+.btn:active:focus,
+.btn.active:focus,
+.btn.focus,
+.btn:active.focus,
+.btn.active.focus {
+  outline: none;
+}
+.btn-dark {
+  background-color: var(--color-dark);
+}
+.tools {
+  margin-left: 10px;
+  font-size: 20px;
+  border-radius: 10px;
+  height: 40px;
+}
+/* Card  */
+.card {
+  border-radius: 20px;
+  background-color: var(--color-background);
+  color:  var(--color-text);
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 4px 8px,
+    rgba(0, 0, 0, 0.04) 0px 16px 24px, rgba(0, 0, 0, 0.01) 0px 24px 32px;
+}
+.card label {
+  font-weight: 300;
+  font-size: 20px;
+  font-family: var(--font);
+}
+.changeCardtext {
+  width: 100%;
+  color:  var(--color-text);
+  text-align: center;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input,
+textarea {
+  background: transparent !important;
+  border: 1px solid #363636;
+  outline: none !important;
+  box-shadow: none !important;
+  color:  var(--color-text) !important;
+}
+input:focus,
+input:before,
+input:hover {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Loader  */
+
+.loader {
+  width: 100%;
+  height: 100%;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.loader img {
+  width: 5%;
+  max-width: 40px;
+  margin-left: 47.5%;
+  margin-top: 10%;
+  animation: spin 1.5s linear infinite;
+}
+/* Options  */
+.options {
+  min-width: 8.125rem;
+  background-color: var(--color-dark);
+  box-shadow: rgba(0, 0, 0, 0.01) 0px 0px 1px, rgba(0, 0, 0, 0.04) 0px 4px 8px,
+    rgba(0, 0, 0, 0.04) 0px 16px 24px, rgba(0, 0, 0, 0.01) 0px 24px 32px;
+  border-radius: 12px;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  position: absolute;
+  top: 4rem;
+  right: 1rem;
+  z-index: 100;
+}
+.options .element {
+  flex: 1 1 0%;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: rgb(195, 197, 203);
+}
+.options a {
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0.1rem;
+  color: rgb(195, 197, 203);
+  display: inline-block;
+  vertical-align: middle;
+}
+.options a:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.options ion-icon {
+  font-size: 18px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Card info  */
+.cardInfo {
+  width: 200px;
+  position: absolute;
+  color:  var(--color-text);
+  border-radius: 15px;
+  box-shadow: rgb(255, 255, 255) 0px 0px 1px, rgba(0, 0, 0, 0.04) !important;
+  bottom: 10px;
+  background-color: var(--color-secondary) !important;
+  border: 1px solid var(--border-color);
+}
+.cardInfo p {
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  padding-top: 15px;
+}
+.cardInfoContainer li {
+  display: inline;
+  white-space: nowrap !important;
+}
+/* List  */
+.table {
+  border-radius: 25px !important;
+  border-width: 1px !important;
+  border-style: solid !important;
+}
+/* Swapp  */
+
+.arrowSwap {
+  font-size: 49px;
+}
+.addressSwap a {
+  font-size: 18px;
+  color: var(--color-primary);
+  width: 100%;
+}
+/* Card of swap */
+.badge-primary {
+  padding: 10px !important;
+  background-color: var(--color-secondary) !important;
+  color: var(--color-primary);
+  border: 1px solid var(--border-color);
+}
+.validationButton ion-icon {
+  font-size: 20px;
+}
+.description {
+  white-space: pre-line;
+  margin-top: 20px;
+}
+
+.informativeText ion-icon {
+  margin-top: 0px;
+  font-size: 18px;
+  padding: 0.1rem;
+  color: rgb(195, 197, 203);
+  vertical-align: middle;
+  cursor: pointer;
+}
+.btn-primary ion-icon {
+  vertical-align: middle;
+}
+.informativeText a {
+  margin-top: 10px;
+  font-size: 10px;
+  color: rgb(195, 197, 203);
+  padding-top: 1px;
+  cursor: pointer;
+}
+.infoIcon:hover + #infoText {
+  display: block !important;
+}
+.swapId {
+  text-align: center !important;
+}
+.arrowSwapCircle {
+  border-radius: 100px;
+  height: 60px !important;
+  width: 60px;
+  text-align: center;
+  border: 1px solid  var(--color-text);
+  text-align: center !important;
+  font-size: 40px;
+  padding: 3px;
+  vertical-align: middle !important;
+}
